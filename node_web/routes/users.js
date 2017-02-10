@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
     path = req.query['path'];
   }
   rp({
-    uri: 'http://go_service:8181/' + path
+    uri: 'http://go-service:8181/' + path
   }).then(function (repos) {
     res.send(repos.toString());
   }).catch(function (err) {
